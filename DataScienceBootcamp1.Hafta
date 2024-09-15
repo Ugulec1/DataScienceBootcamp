@@ -1,0 +1,49 @@
+Soru 1: Kullanıcıdan iki sayı alarak bu sayıları toplayan bir programın pseudo kodunu yazın.
+
+Sayi1=int(input(“birinci sayıyı gir”))
+Sayi2=int(input(“ikinci sayıyı gir”))
+Topla=Sayi1+Sayi2
+Print(Topla)
+
+SORU 2: 1'den 100'e kadar olan sayıları toplayan bir programın pseudo kodunu yazın.
+
+Toplam=0
+#1 ve 100 dahil şekilde toplamak için 101 e kadar yazdık 101 i almayacak
+For x in range (101):
+Toplam+=x
+Print(x)
+
+SORU 3: Kullanıcıdan alınan bir sayının asal olup olmadığını bulan bir programın pseudo kodunu yazın.
+
+Sayi =int(input(“Sayıyı giriniz”))
+#Sayının 1 ve kendinden başka böleni yok ise asal sayı olduğundan ve asal sayılar 2’den başladığı için 2’den sayıya kadar bölünebileceği bir sayı yoksa asal oluyor.
+If Sayi>=2
+  For i in range(2,Sayi):
+    If Sayi % i == 0:
+      print(Sayi,” Asal sayı değildir”)
+      break
+  Else:
+    print(Sayi,”Asal sayıdır”)
+Else:
+Print(sayi,”Asal sayı degildir”)
+
+Soru 4: Bir dizideki (array) elemanların tekrar edip etmediğini kontrol eden bir programın pseudo kodunu yazın.
+
+Def tekrar_var_mı(dizi):
+# Elemanları saklayacağımız bir set(veri tutmak ıcın)
+  elemanlar = set()
+  tekrar_edenler = set()
+  for eleman in dizi:
+    if eleman in elemanlar:
+      tekrar_edenler.add(eleman)
+    else:
+      elemanlar.add(eleman)
+# Örnek dizi
+dizi = [1, 2, 3, 4, "ümit", "ümit", "data", "data", "science", 1, 2, 10, 11, 3, 6, 5, 5, 7, 8, 8, 8, 1, 9]
+# Tekrar eden elemanları bul
+tekrar_edenler = tekrar_var_mi(dizi)
+# Sonucu yazdıralım
+if tekrar_edenler:
+print("Dizide tekrar eden elemanlar:", tekrar_edenler)
+else:
+print("Dizide tekrar eden eleman yok.")
